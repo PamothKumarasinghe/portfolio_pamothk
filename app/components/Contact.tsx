@@ -1,14 +1,13 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { Mail, Github, Linkedin, Twitter, Download } from 'lucide-react';
+import { Mail, Github, Linkedin, Download } from 'lucide-react';
 
 export function Contact() {
   const socials = [
-    { icon: <Mail size={24} />, label: 'Email', href: 'mailto:pamoth@example.com' },
+    { icon: <Mail size={24} />, label: 'Email', href: 'mailto:prkumarasinghe@gmail.com' },
     { icon: <Github size={24} />, label: 'GitHub', href: 'https://github.com/PamothKumarasinghe' },
     { icon: <Linkedin size={24} />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/pamoth-kumarasinghe-3a00b4346/' },
-    { icon: <Twitter size={24} />, label: 'Twitter', href: 'https://twitter.com' }
   ];
 
   return (

@@ -3,6 +3,7 @@
 import { motion } from 'motion/react';
 import { Code2, Gamepad2, Layers } from 'lucide-react';
 
+
 export function About() {
   const features = [
     {
