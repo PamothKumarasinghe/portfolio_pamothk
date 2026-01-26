@@ -69,7 +69,11 @@ export function Navigation() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <Link href="/" className="text-white/90 hover:text-white transition-colors">
+            <Link 
+              href="/" 
+              className="text-white/90 hover:text-white transition-colors"
+              aria-label="Go to homepage"
+            >
               PK
             </Link>
           </motion.div>
@@ -88,6 +92,7 @@ export function Navigation() {
                 <Link
                   href={item.section ? `/#${item.section}` : item.href}
                   onClick={(e) => handleNavClick(e, item)}
+                  aria-label={`Navigate to ${item.name}`}
                 >
                 {item.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-px bg-white transition-all group-hover:w-full" />
@@ -100,6 +105,8 @@ export function Navigation() {
           <button
             className="md:hidden text-white"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isOpen}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -119,7 +126,7 @@ export function Navigation() {
                 href={item.section ? `/#${item.section}` : item.href}
                 onClick={(e) => handleNavClick(e, item)}
                 className="block py-2 text-gray-400 hover:text-white transition-colors"
-                
+                aria-label={`Navigate to ${item.name}`}
               >
                 {item.name}
               </Link>
