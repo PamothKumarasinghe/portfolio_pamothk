@@ -1,38 +1,7 @@
-import { createClient } from '@supabase/supabase-js';
 import { PageHeader } from '../components/PageHeader';
 import { AchievementCard } from '../components/AchievementCard';
 import { StatCard } from '../components/StatCard';
-
-interface Achievement {
-  title: string;
-  description: string;
-  date: string;
-  category: string;
-  image: string;
-}
-
-async function getAchievements(): Promise<Achievement[]> {
-  try {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-    const supabase = createClient(supabaseUrl, supabaseKey);
-
-    const { data, error } = await supabase
-      .from('achievements')
-      .select('*')
-      .order('date', { ascending: false });
-
-    if (error) {
-      console.error('Error fetching achievements:', error);
-      return [];
-    }
-
-    return data || [];
-  } catch (err) {
-    console.error('Error fetching achievements:', err);
-    return [];
-  }
-}
+import { getAchievements } from '../lib/actions';
 
 export default async function Achievements() {
   const achievements = await getAchievements();

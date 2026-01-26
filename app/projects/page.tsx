@@ -1,40 +1,6 @@
-import { createClient } from '@supabase/supabase-js';
 import { PageHeader } from '../components/PageHeader';
 import { ProjectCard } from '../components/ProjectCard';
-
-interface Project {
-  id: string;
-  title: string;
-  description: string;
-  tags: string[];
-  type: string;
-  codeLink: string;
-  liveLink?: string;
-  year?: string;
-}
-
-async function getProjects(): Promise<Project[]> {
-  try {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
-    const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
-    const supabase = createClient(supabaseUrl, supabaseKey);
-
-    const { data, error } = await supabase
-      .from('projects')
-      .select('*')
-      .order('created_at', { ascending: false });
-
-    if (error) {
-      console.error('Error fetching projects:', error);
-      return [];
-    }
-
-    return data || [];
-  } catch (err) {
-    console.error('Error fetching projects:', err);
-    return [];
-  }
-}
+import { getProjects } from '../lib/actions';
 
 export default async function Projects() {
   const projects = await getProjects();

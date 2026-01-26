@@ -1,0 +1,9 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://pamothK.com/sitemap.xml
+
+# Block admin or private areas (if any)
+Disallow: /api/

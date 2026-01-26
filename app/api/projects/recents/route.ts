@@ -1,26 +1,48 @@
 import { createClient } from '@supabase/supabase-js';
-import { strict } from 'assert';
+import { NextResponse } from 'next/server';
 
 const supabaseUrl = process.env.SUPABASE_URL!;
 const supabaseKey = process.env.SUPABASE_ANON_KEY!;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
+// Enable caching with revalidation
+export const revalidate = 60; // Revalidate every 60 seconds
+
 export async function GET() {
-    const { data, error } = await supabase
-        .from('projects')
-        .select('*')
-        .order('created_at', { ascending: false })
-        .limit(3); // only the top most 3 recent projects
-    if (error) {
-        return new Response(JSON.stringify({ error: error.message }), {
-            status: 500,
-            headers: { 'Content-Type': 'application/json' }
+    try {
+        const { data, error } = await supabase
+            .from('projects')
+            .select('*')
+            .order('created_at', { ascending: false })
+            .limit(3); // only the top most 3 recent projects
+        
+        if (error) {
+            return NextResponse.json(
+                { error: error.message },
+                { 
+                    status: 500,
+                    headers: {
+                        'Cache-Control': 'no-store', // Don't cache errors
+                    }
+                }
+            );
+        }
 
+        return NextResponse.json(data, {
+            status: 200,
+            headers: {
+                'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=30',
+            }
         });
+    } catch (error: any) {
+        return NextResponse.json(
+            { error: 'Internal server error' },
+            { 
+                status: 500,
+                headers: {
+                    'Cache-Control': 'no-store',
+                }
+            }
+        );
     }
-
-    return new Response(JSON.stringify(data), {
-        status: 200,
-        headers: { 'Content-Type': 'application/json' }
-    });
 }
