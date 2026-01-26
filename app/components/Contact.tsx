@@ -80,7 +80,7 @@ export function Contact() {
             className="pt-12 border-t border-white/5"
           >
             <p className="text-gray-500">
-              &copy; 2025 Pamoth Kumarasinghe. All rights reserved.
+              &copy; {new Date().getFullYear()} Pamoth Kumarasinghe. All rights reserved.
             </p>
           </motion.div>
         </motion.div>
