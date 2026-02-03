@@ -24,16 +24,31 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="min-h-screen flex items-center py-20 border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6 w-full">
+    <section id="about" className="min-h-screen flex items-center py-20 border-t border-white/5 relative overflow-hidden">
+      {/* Background animation */}
+      <motion.div
+        className="absolute -top-40 -right-40 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"
+        animate={{ 
+          scale: [1, 1.2, 1],
+          opacity: [0.2, 0.4, 0.2]
+        }}
+        transition={{ duration: 8, repeat: Infinity }}
+      />
+
+      <div className="max-w-7xl mx-auto px-6 w-full relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-gray-400 mb-4">About Me</h2>
-          <p className="text-white max-w-3xl mb-16 text-gray-300">
+          <motion.h2 
+            className="text-gray-400 mb-4 text-4xl font-bold"
+            whileInView={{ x: [0] }}
+          >
+            About Me
+          </motion.h2>
+          <p className="text-white max-w-3xl mb-16 text-gray-300 text-lg leading-relaxed">
             I&apos;m a passionate developer who loves crafting exceptional digital experiences. 
             With expertise spanning software engineering, full stack development, and game development, 
             I bring ideas to life through code, creativity, and attention to detail.
@@ -47,13 +62,24 @@ export function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 * index, duration: 0.6 }}
-                className="p-6 border border-white/10 hover:border-white/30 transition-colors group"
+                whileHover={{ 
+                  y: -8,
+                  transition: { duration: 0.3 }
+                }}
+                className="p-6 border border-white/10 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all rounded-lg group backdrop-blur-sm"
               >
-                <div className="text-white mb-4 group-hover:scale-110 transition-transform inline-block">
+                <motion.div 
+                  className="text-blue-400 mb-4 inline-block"
+                  whileHover={{ 
+                    scale: 1.2,
+                    rotate: 10
+                  }}
+                  transition={{ type: 'spring', stiffness: 400 }}
+                >
                   {feature.icon}
-                </div>
-                <h3 className="text-white mb-2">{feature.title}</h3>
-                <p className="text-gray-400">{feature.description}</p>
+                </motion.div>
+                <h3 className="text-white mb-2 text-xl font-semibold">{feature.title}</h3>
+                <p className="text-gray-400 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
