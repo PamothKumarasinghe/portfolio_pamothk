@@ -123,19 +123,9 @@ export function Contact() {
             transition={{ delay: 0.6 }}
             className="pt-12 border-t border-white/5"
           >
-            <motion.p 
-              className="text-gray-500 flex items-center justify-center gap-2"
-              animate={{ scale: [1, 1.05, 1] }}
-              transition={{ duration: 3, repeat: Infinity }}
-            >
+            <p className="text-gray-500">
               &copy; {new Date().getFullYear()} Pamoth Kumarasinghe. All rights reserved.
-              <motion.span
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 1, repeat: Infinity, delay: 0.3 }}
-              >
-                <Heart size={16} className="text-pink-500 fill-pink-500" />
-              </motion.span>
-            </motion.p>
+            </p>
           </motion.div>
         </motion.div>
       </div>
