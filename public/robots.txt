@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://pamothK.com/sitemap.xml
+Sitemap: https://pamoth.cse.mrt.lk/sitemap.xml
 
 # Block admin or private areas (if any)
 Disallow: /api/
