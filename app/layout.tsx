@@ -55,16 +55,6 @@ export const metadata: Metadata = {
       "Software Engineer, Full Stack Developer, and Game Developer portfolio showcasing projects and skills",
     images: ["https://pamoth.cse.mrt.lk/profilepic.jpg"],
   },
-  icons: {
-    icon: [
-      { url: "/profilepic.jpg" },
-      { url: "/profilepic.jpg", sizes: "192x192", type: "image/jpg" },
-    ],
-    apple: [
-      { url: "/profilepic.jpg" },
-    ],
-    shortcut: ["/profilepic.jpg"],
-  },
   robots: {
     index: true,
     follow: true,
