@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Projects | Pamoth Kumarasinghe',
     description: 'Browse my portfolio of web development, game development, and software engineering projects.',
-    url: 'https://pamothK.com/projects',
+    url: 'https://pamoth.cse.mrt.lk/projects',
     type: 'website',
   },
   twitter: {

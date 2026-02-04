@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Achievements & Awards | Pamoth Kumarasinghe',
     description: 'Explore my achievements, awards, certifications, and milestones in software and game development.',
-    url: 'https://pamothK.com/achievements',
+    url: 'https://pamoth.cse.mrt.lk/achievements',
     type: 'website',
   },
   twitter: {

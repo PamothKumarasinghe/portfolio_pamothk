@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://pamothK.com"),
+  metadataBase: new URL("https://pamoth.cse.mrt.lk"),
   title: "Pamoth Kumarasinghe - Portfolio",
   description: "Software Engineer, Full Stack Developer, and Game Developer portfolio showcasing projects and skills",
   keywords: [
@@ -29,22 +29,22 @@ export const metadata: Metadata = {
     "Web Development",
     "github tricks",
   ],
-  authors: [{ name: "Pamoth Kumarasinghe", url: "https://pamothK.com" }],
+  authors: [{ name: "Pamoth Kumarasinghe", url: "https://pamoth.cse.mrt.lk" }],
   publisher: "Pamoth Kumarasinghe",
   openGraph: {
     title: "Pamoth Kumarasinghe - Portfolio",
     description:
       "Software Engineer, Full Stack Developer, and Game Developer portfolio showcasing projects and skills",
-    url: "https://pamothK.com",
+    url: "https://pamoth.cse.mrt.lk",
     siteName: "Pamoth Kumarasinghe Portfolio",
-    // images: [
-    //   {
-    //     url: "https://pamothK.com/og-image.png",
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "Pamoth Kumarasinghe Portfolio",
-    //   },
-    // ],
+    images: [
+      {
+        url: "https://pamoth.cse.mrt.lk/profilepic.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Pamoth Kumarasinghe Portfolio",
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
@@ -53,7 +53,17 @@ export const metadata: Metadata = {
     title: "Pamoth Kumarasinghe - Portfolio",
     description:
       "Software Engineer, Full Stack Developer, and Game Developer portfolio showcasing projects and skills",
-    // images: ["https://pamothK.com/og-image.png"],
+    images: ["https://pamoth.cse.mrt.lk/profilepic.jpg"],
+  },
+  icons: {
+    icon: [
+      { url: "/profilepic.jpg" },
+      { url: "/profilepic.jpg", sizes: "192x192", type: "image/jpg" },
+    ],
+    apple: [
+      { url: "/profilepic.jpg" },
+    ],
+    shortcut: ["/profilepic.jpg"],
   },
   robots: {
     index: true,
