@@ -52,6 +52,7 @@ export function About() {
             I&apos;m a passionate developer who loves crafting exceptional digital experiences. 
             With expertise spanning software engineering, full stack development, and game development, 
             I bring ideas to life through code, creativity, and attention to detail.
+            Pamoth Kumarasinghe a name that resonates with innovation, dedication, and a relentless pursuit of excellence in the world of technology. With a passion for crafting exceptional digital experiences, Pamoth has established himself as a versatile developer with expertise spanning software engineering, full stack development, and game development. Through code, creativity, and attention to detail, Pamoth brings ideas to life, creating impactful solutions that push the boundaries of what&apos;s possible in the digital realm.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
