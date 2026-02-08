@@ -107,7 +107,8 @@ export default function RootLayout({
     "email": "prkumarasinghe@gmail.com",
     "sameAs": [
       "https://github.com/PamothKumarasinghe",
-      "https://www.linkedin.com/in/pamoth-kumarasinghe-3a00b4346/"
+      "https://www.linkedin.com/in/pamoth-kumarasinghe-3a00b4346/",
+      "https://www.instagram.com/nikolai_laazz?igsh=cDR0bWpnN2x3anEy"
     ],
     "knowsAbout": [
       "Software Engineering",

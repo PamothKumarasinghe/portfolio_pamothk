@@ -24,6 +24,7 @@ export function Navigation() {
     { name: 'About', href: '/#about', section: 'about' },
     { name: 'Skills', href: '/#skills', section: 'skills' },
     { name: 'Projects', href: '/projects', section: null },
+    { name: 'Blog', href: '/blog', section: null },
     { name: 'Achievements', href: '/achievements', section: null },
     { name: 'Contact', href: '/#contact', section: 'contact' },
   ];
