@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://pamoth.cse.mrt.lk"),
   title: {
-    default: "Pamoth Kumarasinghe | Backend Engineer & Full Stack Developer Portfolio",
+    default: "Pamoth Kumarasinghe | Backend Engineer & Full Stack Developer Portfolio at University of Moratuwa",
     template: "%s | Pamoth Kumarasinghe"
   },
   description: "Backend Engineer & Full Stack Developer specializing in Node.js, Express.js, FastAPI, and Spring Boot. University of Moratuwa CSE undergraduate building scalable software systems.",
@@ -29,10 +29,7 @@ export const metadata: Metadata = {
     "Game Developer",
     "Web Developer",
     "React Developer",
-    "Next.js Developer",
-    "Node.js Developer",
-    "TypeScript Developer",
-    "Express.js Developer",
+    "Pamoth Kumarasinghe portfolio"
     "FastAPI Developer",
     "Spring Boot Developer",
     "RESTful API Design",
@@ -46,7 +43,7 @@ export const metadata: Metadata = {
     "Contact",
     "Web Development",
     "Backend Development",
-    "github tricks",
+    "Pamoth Kumarasinghe University of Moratuwa",
     "Programming",
     "Computer Science",
     "Sri Lanka Developer",
@@ -58,7 +55,7 @@ export const metadata: Metadata = {
     canonical: "https://pamoth.cse.mrt.lk",
   },
   openGraph: {
-    title: "Pamoth Kumarasinghe | Backend Engineer & Full Stack Developer Portfolio",
+    title: "Pamoth Kumarasinghe | Backend Engineer & Full Stack Developer Portfolio at University of Moratuwa",
     description:
       "Backend Engineer & Full Stack Developer specializing in Node.js, Express.js, FastAPI, and Spring Boot. University of Moratuwa CSE undergraduate building scalable software systems.",
     url: "https://pamoth.cse.mrt.lk",
@@ -73,14 +70,6 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "profile",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Pamoth Kumarasinghe | Backend Engineer & Full Stack Developer Portfolio",
-    description:
-      "Backend Engineer & Full Stack Developer specializing in Node.js, Express.js, FastAPI, and Spring Boot. University of Moratuwa CSE undergraduate building scalable software systems.",
-    images: ["https://pamoth.cse.mrt.lk/profilepic.jpg"],
-    creator: "@pamothkumarasinghe",
   },
   robots: {
     index: true,
