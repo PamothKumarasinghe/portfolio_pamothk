@@ -5,6 +5,9 @@ import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { Navigation } from './components/Navigation';
 
+// Enable ISR for homepage with data
+export const revalidate = 60;
+
 export default function Home() {
   // FAQ JSON-LD structured data for SEO
   const faqJsonLd = {

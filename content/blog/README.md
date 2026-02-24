@@ -169,3 +169,6 @@ content/blog/
 ---
 
 **Happy blogging! 🚀**
+
+live site:
+https://pamoth.cse.mrt.lk

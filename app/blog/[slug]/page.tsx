@@ -8,6 +8,9 @@ import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
+// Static generation with ISR for optimal SEO
+export const revalidate = 3600; // Revalidate every hour
+
 interface BlogPostPageProps {
   params: Promise<{
     slug: string;
@@ -53,11 +56,20 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       publishedTime: post.date,
       authors: [post.author],
       tags: post.tags,
+      images: [
+        {
+          url: 'https://pamoth.cse.mrt.lk/profilepic.jpg',
+          width: 1200,
+          height: 630,
+          alt: `${post.title} - Blog post by Pamoth Kumarasinghe`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: post.title,
       description: post.description,
+      images: ['https://pamoth.cse.mrt.lk/profilepic.jpg'],
     },
   };
 }

@@ -3,9 +3,13 @@ import Link from 'next/link';
 import { getAllPosts } from '../lib/blog';
 import { Navigation } from '../components/Navigation';
 
+// Force static generation for optimal SEO
+export const dynamic = 'force-static';
+export const revalidate = 3600; // Revalidate every hour
+
 export const metadata: Metadata = {
-  title: 'Blog',
-  description: 'Technical blog posts by Pamoth Kumarasinghe covering software engineering, web development, React, Next.js, game development, and programming best practices.',
+  title: 'Tech Blog | Pamoth Kumarasinghe',
+  description: 'Technical blog posts covering software engineering, web development, React, Next.js, game development, and programming tips.',
   keywords: [
     'Pamoth Kumarasinghe blog',
     'software engineering blog',
@@ -19,10 +23,24 @@ export const metadata: Metadata = {
     canonical: 'https://pamoth.cse.mrt.lk/blog',
   },
   openGraph: {
-    title: 'Blog | Pamoth Kumarasinghe',
-    description: 'Technical blog posts covering software engineering, web development, and programming best practices.',
+    title: 'Tech Blog | Pamoth Kumarasinghe',
+    description: 'Technical blog posts covering software engineering, web development, React, Next.js, game development, and programming tips.',
     url: 'https://pamoth.cse.mrt.lk/blog',
     type: 'website',
+    images: [
+      {
+        url: 'https://pamoth.cse.mrt.lk/profilepic.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Pamoth Kumarasinghe - Tech Blog',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Tech Blog | Pamoth Kumarasinghe',
+    description: 'Technical blog posts covering software engineering, web development, React, Next.js, game development, and programming tips.',
+    images: ['https://pamoth.cse.mrt.lk/profilepic.jpg'],
   },
 };
 

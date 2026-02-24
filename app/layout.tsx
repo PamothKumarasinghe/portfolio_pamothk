@@ -15,15 +15,16 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://pamoth.cse.mrt.lk"),
   title: {
-    default: "Pamoth Kumarasinghe | Software Engineer & Full Stack Developer Portfolio",
+    default: "Pamoth Kumarasinghe | Backend Engineer & Full Stack Developer Portfolio",
     template: "%s | Pamoth Kumarasinghe"
   },
-  description: "Pamoth Kumarasinghe - Professional Software Engineer, Full Stack Developer, and Game Developer. Expert in React, Next.js, Node.js, and modern web technologies. View my portfolio of innovative projects and achievements.",
+  description: "Backend Engineer & Full Stack Developer specializing in Node.js, Express.js, FastAPI, and Spring Boot. University of Moratuwa CSE undergraduate building scalable software systems.",
   keywords: [
     "Pamoth Kumarasinghe",
     "Pamoth",
     "Kumarasinghe",
     "Software Engineer",
+    "Backend Engineer",
     "Full Stack Developer",
     "Game Developer",
     "Web Developer",
@@ -31,12 +32,20 @@ export const metadata: Metadata = {
     "Next.js Developer",
     "Node.js Developer",
     "TypeScript Developer",
+    "Express.js Developer",
+    "FastAPI Developer",
+    "Spring Boot Developer",
+    "RESTful API Design",
+    "System Architecture",
+    "University of Moratuwa",
+    "Sri Lanka Software Engineer",
     "Portfolio",
     "Projects",
     "Skills",
     "Achievements",
     "Contact",
     "Web Development",
+    "Backend Development",
     "github tricks",
     "Programming",
     "Computer Science",
@@ -49,9 +58,9 @@ export const metadata: Metadata = {
     canonical: "https://pamoth.cse.mrt.lk",
   },
   openGraph: {
-    title: "Pamoth Kumarasinghe | Software Engineer & Full Stack Developer Portfolio",
+    title: "Pamoth Kumarasinghe | Backend Engineer & Full Stack Developer Portfolio",
     description:
-      "Professional Software Engineer, Full Stack Developer, and Game Developer. Expert in React, Next.js, Node.js, and modern web technologies. Explore my innovative projects and technical achievements.",
+      "Backend Engineer & Full Stack Developer specializing in Node.js, Express.js, FastAPI, and Spring Boot. University of Moratuwa CSE undergraduate building scalable software systems.",
     url: "https://pamoth.cse.mrt.lk",
     siteName: "Pamoth Kumarasinghe Portfolio",
     images: [
@@ -67,9 +76,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pamoth Kumarasinghe | Software Engineer & Full Stack Developer",
+    title: "Pamoth Kumarasinghe | Backend Engineer & Full Stack Developer Portfolio",
     description:
-      "Professional Software Engineer, Full Stack Developer, and Game Developer. Expert in React, Next.js, Node.js, and modern web technologies.",
+      "Backend Engineer & Full Stack Developer specializing in Node.js, Express.js, FastAPI, and Spring Boot. University of Moratuwa CSE undergraduate building scalable software systems.",
     images: ["https://pamoth.cse.mrt.lk/profilepic.jpg"],
     creator: "@pamothkumarasinghe",
   },
@@ -102,8 +111,8 @@ export default function RootLayout({
     "name": "Pamoth Kumarasinghe",
     "url": "https://pamoth.cse.mrt.lk",
     "image": "https://pamoth.cse.mrt.lk/profilepic.jpg",
-    "jobTitle": "Software Engineer",
-    "description": "Professional Software Engineer, Full Stack Developer, and Game Developer specializing in modern web technologies",
+    "jobTitle": "Backend Engineer & Full Stack Developer",
+    "description": "Backend Engineer and Full Stack Developer specializing in Node.js, Express.js, FastAPI, and Spring Boot. University of Moratuwa CSE undergraduate passionate about building scalable software systems.",
     "email": "prkumarasinghe@gmail.com",
     "sameAs": [
       "https://github.com/PamothKumarasinghe",
@@ -111,18 +120,27 @@ export default function RootLayout({
       "https://www.instagram.com/nikolai_laazz?igsh=cDR0bWpnN2x3anEy"
     ],
     "knowsAbout": [
+      "Backend Engineering",
       "Software Engineering",
       "Full Stack Development",
       "Game Development",
+      "Node.js",
+      "Express.js",
+      "FastAPI",
+      "Spring Boot",
+      "RESTful API Design",
+      "System Architecture",
       "React",
       "Next.js",
-      "Node.js",
       "TypeScript",
       "Unity",
       "JavaScript",
       "Python",
       "Java",
-      "Web Development"
+      "Web Development",
+      "Database Design",
+      "Authentication Systems",
+      "Cloud Deployments"
     ],
     "alumniOf": {
       "@type": "Organization",

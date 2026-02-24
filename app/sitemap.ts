@@ -1,6 +1,9 @@
 import { MetadataRoute } from 'next';
 import { getAllPosts } from './lib/blog';
 
+// Revalidate sitemap every hour for SEO
+export const revalidate = 3600;
+
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://pamoth.cse.mrt.lk';
 

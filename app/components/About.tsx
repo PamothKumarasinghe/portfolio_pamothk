@@ -8,19 +8,32 @@ export function About() {
   const features = [
     {
       icon: <Code2 size={32} />,
-      title: 'Software Engineering',
-      description: 'Building robust, scalable applications with clean architecture and best practices.'
+      title: 'Backend Engineering',
+      description: 'Developing secure, efficient, and production-ready APIs using Node.js, Express.js, FastAPI, and Java Spring Boot.'
     },
     {
       icon: <Layers size={32} />,
       title: 'Full Stack Development',
-      description: 'End-to-end development from frontend interfaces to backend systems and databases.'
+      description: 'Building complete applications with database design, authentication systems, RESTful APIs, and cloud-ready deployments.'
     },
     {
       icon: <Gamepad2 size={32} />,
       title: 'Game Development',
-      description: 'Creating immersive gaming experiences with compelling mechanics and engaging narratives.'
+      description: 'Creating immersive gaming experiences while exploring system design and software architecture.'
     }
+  ];
+
+  const keywords = [
+    'Backend Engineer',
+    'Full Stack Developer',
+    'Node.js Developer',
+    'FastAPI Developer',
+    'Spring Boot Developer',
+    'University of Moratuwa',
+    'Sri Lanka Software Engineer',
+    'Express.js Developer',
+    'RESTful API Design',
+    'System Architecture',
   ];
 
   return (
@@ -48,12 +61,53 @@ export function About() {
           >
             About Me
           </motion.h2>
-          <p className="text-white max-w-3xl mb-16 text-gray-300 text-lg leading-relaxed">
-            I&apos;m a passionate developer who loves crafting exceptional digital experiences. 
-            With expertise spanning software engineering, full stack development, and game development, 
-            I bring ideas to life through code, creativity, and attention to detail.
-            Pamoth Kumarasinghe a name that resonates with innovation, dedication, and a relentless pursuit of excellence in the world of technology. With a passion for crafting exceptional digital experiences, Pamoth has established himself as a versatile developer with expertise spanning software engineering, full stack development, and game development. Through code, creativity, and attention to detail, Pamoth brings ideas to life, creating impactful solutions that push the boundaries of what&apos;s possible in the digital realm.
-          </p>
+          <div className="text-white max-w-4xl mb-8 text-gray-300 text-lg leading-relaxed space-y-4">
+            <p>
+              I am <strong>Pamoth Kumarasinghe</strong>, a Computer Science and Engineering undergraduate at the <strong>University of Moratuwa</strong>, 
+              specializing in backend engineering and full stack software development. I am passionate about designing and building scalable, 
+              high-performance software systems and modern web applications.
+            </p>
+            <p>
+              My core expertise lies in <strong>backend development</strong> using <strong>Node.js</strong>, <strong>Express.js</strong>, <strong>FastAPI</strong>, 
+              and <strong>Java Spring Boot</strong>, where I develop secure, efficient, and production-ready APIs and services. I have strong experience in 
+              building complete full stack applications, handling database design, authentication systems, RESTful API architecture, and cloud-ready deployments.
+            </p>
+            <p>
+              Beyond web development, I am also interested in <strong>game development</strong>, <strong>system design</strong>, and <strong>software architecture</strong>, 
+              constantly exploring new technologies and best practices to improve performance, scalability, and user experience.
+            </p>
+            <p>
+              I am driven by a deep passion for technology and a commitment to continuous learning. I enjoy transforming complex ideas into practical, 
+              impactful digital solutions that solve real-world problems. My goal is to contribute to innovative software projects and grow as a 
+              backend and systems engineer while building reliable and meaningful software.
+            </p>
+          </div>
+
+          {/* Keywords Section for SEO */}
+          <motion.div 
+            className="mb-16 max-w-4xl"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+          >
+            <h3 className="text-gray-500 text-sm font-semibold mb-3 uppercase tracking-wider">Keywords</h3>
+            <div className="flex flex-wrap gap-2">
+              {keywords.map((keyword, index) => (
+                <motion.span
+                  key={keyword}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.05 * index, duration: 0.3 }}
+                  whileHover={{ scale: 1.05, backgroundColor: 'rgba(59, 130, 246, 0.15)' }}
+                  className="px-3 py-1.5 text-sm bg-white/5 text-gray-400 rounded-full border border-white/10 hover:border-blue-500/50 hover:text-blue-400 transition-all cursor-default"
+                >
+                  {keyword}
+                </motion.span>
+              ))}
+            </div>
+          </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {features.map((feature, index) => (
